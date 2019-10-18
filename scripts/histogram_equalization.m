@@ -1,10 +1,10 @@
 Pc = imread('../images/mrt-train.jpg');
 P = rgb2gray(Pc);
 % imhist(P, 10);
-% imhist(P, 255);
+% imhist(P, 256);
 P3 = histeq(P, 255);
 % imhist(P3, 10);
-imhist(P3, 255);
-P3_re = histeq(P3, 255);
+imhist(P3, 256);
+% P3_re = histeq(P3, 255);
 % imhist(P3_re, 10);
-imhist(P3_re, 255);
+% imhist(P3_re, 255);

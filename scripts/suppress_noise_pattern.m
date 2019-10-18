@@ -20,12 +20,13 @@ F(y1,:) = 0;
 F(y2,:) = 0;
 F(:,x1) = 0;
 F(:,x2) = 0;
-% S = abs(F).^2 / length(Pc);
+S = abs(F).^2 / length(Pc);
+imagesc(fftshift(S.^0.1));
 result = uint8(ifft2(F));
 % r_min = double(min(result(:)));
 % r_max = double(max(result(:)));
 % result = uint8(255 * (double(result) - r_min) / (r_max - r_min));
 result = histeq(result, 255);
-imshow(result);
+% imshow(result);
 
 
