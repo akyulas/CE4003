@@ -1,8 +1,8 @@
 Pc = imread('../images/mrt-train.jpg');
-% whos Pc;
+whos Pc;
 P = rgb2gray(Pc);
-% whos P;
-% imshow(P);
+whos P;
+imshow(P);
 P_minVal = double(min(P(:)));
 P_maxVal = double(max(P(:)));
 subOperation = imsubtract(P, P_minVal);
